@@ -1,0 +1,38 @@
+* {
+  /*margin: 0 auto;*/
+  /*text-align: center;*/
+}
+
+.brush-color {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}
+.pixel {
+  box-sizing: border-box;
+  height: 5px;
+  width: 5px;
+  display: inline-block;
+  float:right;
+}
+
+.square {
+  border: 1px solid black;
+  overflow:hidden;
+  width: 50%;
+  /*margin: 0 auto;*/
+}
+
+.panel > * {
+  display: inline-block;
+}
+
+.colorOptions {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+}
+
+.panel {
+  float: right;
+}
