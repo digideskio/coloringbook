@@ -27,12 +27,16 @@
   display: inline-block;
 }
 
-.colorOptions {
-  width: 40px;
-  height: 40px;
+.colorBox {
+  width: 20px;
+  height: 20px;
   background-color: red;
+  border: 1px solid black;
 }
 
+#mistyrose {
+  background-color: mistyrose;
+}
 .panel {
   float: right;
 }
