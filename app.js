@@ -11,7 +11,13 @@ var colorFamily = {
     three: '#8A1C7C',
     four: '#17825B',
     five: '#03256C'},
-  primary: {}
+  primary: {
+    one: '#E73900',
+    two: '#E9DF00',
+    three: '#02880B',
+    four: '#FF1000',
+    five: '#0A2472'
+  }
 }
 //default color is black
 $('.brush-color').css("background-color", "black");
@@ -44,6 +50,7 @@ $('#clearBtn').on('click', function(){
 
 $('.palette').on('click', function(event){
   var $chosenPalette = event.target.textContent;
+  $('.colorOptionsDisplay').css("display", "block");
   console.log($chosenPalette);
   $('#one').css("background-color", colorFamily[$chosenPalette].one);
   $('#two').css("background-color", colorFamily[$chosenPalette].two);
