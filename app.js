@@ -6,11 +6,11 @@ var colorFamily = {
     three: '#A1CAF1',
     four: '#FBEC5D',
     five: '#D19FE8'},
-  jewel: {one: '',
-    two: '',
-    three: '',
-    four: '',
-    five: ''},
+  jewel: {one: '#1030ee',
+    two: '#EE2677',
+    three: '#8A1C7C',
+    four: '#17825B',
+    five: '#03256C'},
   primary: {}
 }
 //default color is black
@@ -40,14 +40,16 @@ $('#clearBtn').on('click', function(){
   $('.pixel').css("background-color", "white");
 })
 
-$('#pastel').on('click', function(){
-  //change colorBox colors
-  $('#one').css("background-color", colorFamily.pastel.one);
-  $('#two').css("background-color", colorFamily.pastel.two);
-  $('#three').css("background-color", colorFamily.pastel.three);
-  $('#four').css("background-color", colorFamily.pastel.four);
-  $('#five').css("background-color", colorFamily.pastel.five);
+// choosing a color palette
 
+$('.palette').on('click', function(event){
+  var $chosenPalette = event.target.textContent;
+  console.log($chosenPalette);
+  $('#one').css("background-color", colorFamily[$chosenPalette].one);
+  $('#two').css("background-color", colorFamily[$chosenPalette].two);
+  $('#three').css("background-color", colorFamily[$chosenPalette].three);
+  $('#four').css("background-color", colorFamily[$chosenPalette].four);
+  $('#five').css("background-color", colorFamily[$chosenPalette].five);
 })
 
 $('.colorOptionsDisplay div').on('click', function(event) {
