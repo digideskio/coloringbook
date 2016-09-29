@@ -8,25 +8,33 @@
   <title>Document</title>
 </head>
 <body>
-
-  <div class="square"></div>
+  <h1>Virtual Coloring Book</h1>
+  <p>Type in a color or click on a color story to choose your color palette, then start drawing!</p>
+  <div class="square left"></div>
   <div class="panel">
-    <div class="colorFamily">
-      <div id="pastel" class="palette">pastel</div>
-      <div id="primary" class="palette">primary</div>
-      <div id="jewel" class="palette">jewel</div>
+    <div id="colorStoryDiv">
+      <h4>Color Stories</h4>
+      <div class="colorFamily">
+        <h5 id="pastel" class="palette">pastel</h5>
+        <h5 id="primary" class="palette">primary</h5>
+        <h5 id="jewel" class="palette">jewel</h5>
+      </div>
+      <div class="colorOptionsDisplay">
+        <div id="one" class="colorBox"></div>
+        <div id="two" class="colorBox"></div>
+        <div id="three" class="colorBox"></div>
+        <div id="four" class="colorBox"></div>
+        <div id="five" class="colorBox"></div>
+      </div>
     </div>
-    <div class="colorOptionsDisplay">
-      <div id="one" class="colorBox"></div>
-      <div id="two" class="colorBox"></div>
-      <div id="three" class="colorBox"></div>
-      <div id="four" class="colorBox"></div>
-      <div id="five" class="colorBox"></div>
+
+    <div id="selectionDiv" class="left">
+      <h4>Selected Color</h4>
+      <div class="brush-color"></div>
+      <input type="text" name="color" placeholder="Name a color!">
+      <button id="set-color">Change</button>
+      <button id="clearBtn">Clear palette</button>
     </div>
-    <div class="brush-color"></div>
-    <input type="text" name="color" placeholder="What Color?">
-    <button id="set-color">Change</button>
-    <button id="clearBtn">Clear palette</button>
   </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

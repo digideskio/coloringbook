@@ -1,5 +1,6 @@
 var $setBtn = $('#set-color');
 
+// color stories object
 var colorFamily = {
   pastel: {one: '#FBCCE7',
     two: '#ACE1AF',
@@ -47,11 +48,10 @@ $('#clearBtn').on('click', function(){
 })
 
 // choosing a color palette
-
 $('.palette').on('click', function(event){
   var $chosenPalette = event.target.textContent;
   $('.colorOptionsDisplay').css("display", "block");
-  console.log($chosenPalette);
+  // console.log($chosenPalette);
   $('#one').css("background-color", colorFamily[$chosenPalette].one);
   $('#two').css("background-color", colorFamily[$chosenPalette].two);
   $('#three').css("background-color", colorFamily[$chosenPalette].three);

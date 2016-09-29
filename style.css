@@ -6,6 +6,7 @@
 .brush-color {
   width: 10%;
   height: 20px;
+  border-radius: 100%;
 }
 .pixel {
   box-sizing: border-box;
@@ -19,16 +20,19 @@
   border: 1px solid black;
   overflow:hidden;
   width: 50%;
-  float: left;
+  /*float: left;*/
   /*margin: 0 auto;*/
 }
 
 .panel > * {
   display: inline-block;
+  background-color: blanchedalmond;
+  width: 40%;
+  height: 40vh;
 }
 
 .colorBox {
-  width: 100%;
+  width: 50%;
   height: 20px;
 }
 
@@ -40,4 +44,13 @@
 .colorOptionsDisplay {
   display:none;
   width: 20%;
+}
+
+.left {
+  float: left;
+}
+
+#pastel:active {
+  font-size: 2em;
+  background-color: pink;
 }
