@@ -35,12 +35,23 @@ $(document).ready(function(){
 
 $setBtn.on('click', function(){
   $('.brush-color').css("background-color", $('input').val());
+  $('.errorMsg').css("visibility", 'hidden');
+  console.log('should be hidden');
+  if ($('.brush-color').css("background-color") != $('input').val())
+    // setInterval(showError, 500);
+    debugger
+    $('.errorMsg').css("visibility", 'visible');
+    console.log('color not found');
 })
-
+// function showError() {
+  // $('.errorMsg').css("visibility", 'visible');
+//   clearInterval();
+// }
 //listen on clicking 'enter'
 $('input').on("keypress", function(e){
   if (e.which ==13)
   $('.brush-color').css("background-color", $('input').val());
+  $('.errorMsg').css("visibility", 'hidden');
 })
 
 $('#clearBtn').on('click', function(){
@@ -49,6 +60,7 @@ $('#clearBtn').on('click', function(){
 
 // choosing a color palette
 $('.palette').on('click', function(event){
+  // ($'.colorOptionsDisplay').toggle();
   var $chosenPalette = event.target.textContent;
   $('.colorOptionsDisplay').css("display", "block");
   // console.log($chosenPalette);
@@ -62,4 +74,11 @@ $('.palette').on('click', function(event){
 $('.colorOptionsDisplay div').on('click', function(event) {
   var color = $(this).css("background-color");
   $('.brush-color').css("background-color", color);
+  $('.errorMsg').css("visibility", 'hidden');
 })
+
+$('.colorFamilyList li').click(function(){
+    $('.highlight').removeClass('highlight');
+$(this).addClass('highlight');
+
+});

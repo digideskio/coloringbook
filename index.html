@@ -4,21 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 <body>
   <h1>Virtual Coloring Book</h1>
-  <p>Type in a color or click on a color story to choose your color palette, then start drawing!</p>
+  <p>Using the virtual coloring book is easy!  Simply use your mouse to draw within the canvas.  Search colors by name or click on a color story to choose your color palette.</p>
   <div class="square left"></div>
   <div class="panel">
     <div id="colorStoryDiv">
-      <h4>Color Stories</h4>
+
+      <h2>Color Stories</h2>
       <div class="colorFamily">
-        <h5 id="pastel" class="palette">pastel</h5>
-        <h5 id="primary" class="palette">primary</h5>
-        <h5 id="jewel" class="palette">jewel</h5>
+        <ul class="colorFamilyList">
+          <li><div id="pastel" class="palette"><span>pastel</span></div></li>
+          <li><div id="primary" class="palette"><span>primary</span></div></li>
+          <li><div id="jewel" class="palette"><span>jewel</span></div></li>
+        </ul>
       </div>
+      <!-- <div class="colorOptionsDisplay">
+        <div id="one" class="colorBox"></div>
+        <div id="two" class="colorBox"></div>
+        <div id="three" class="colorBox"></div>
+        <div id="four" class="colorBox"></div>
+        <div id="five" class="colorBox"></div>
+      </div> -->
+    </div>
+
+    <div id="selectionDiv" class="left">
+      <h2>Selected Color</h2>
+      <div class="brush-color"></div>
+      <input type="text" name="color" placeholder="Name a color!">
+      <p class="errorMsg">I don't recognize that color.</p>
+      <button id="set-color">Change</button>
+      <button id="clearBtn">Clear palette</button>
       <div class="colorOptionsDisplay">
         <div id="one" class="colorBox"></div>
         <div id="two" class="colorBox"></div>
@@ -26,14 +46,6 @@
         <div id="four" class="colorBox"></div>
         <div id="five" class="colorBox"></div>
       </div>
-    </div>
-
-    <div id="selectionDiv" class="left">
-      <h4>Selected Color</h4>
-      <div class="brush-color"></div>
-      <input type="text" name="color" placeholder="Name a color!">
-      <button id="set-color">Change</button>
-      <button id="clearBtn">Clear palette</button>
     </div>
   </div>
 
